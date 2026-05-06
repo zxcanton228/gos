@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { passport } from '../data/passport'
 
 const BackIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -24,14 +25,14 @@ const PaperclipIcon = () => (
 )
 
 const fields = [
-  { label: 'ФИО',               value: 'ВЕГЕЛЕ КИРИЛЛ РОМАНОВИЧ' },
-  { label: 'Пол',               value: 'Мужской' },
-  { label: 'Дата рождения',     value: '17.01.2010' },
-  { label: 'Место рождения',    value: 'ГОРОД НОВОКУЗНЕЦК КЕМЕРОВСКАЯ ОБЛАСТЬ' },
-  { label: 'Серия и номер',     value: '4623 456961' },
-  { label: 'Дата выдачи',       value: '30.01.2024' },
-  { label: 'Код подразделения', value: '500-077' },
-  { label: 'Кем выдан',         value: 'ГУ МВД РОССИЯ ПО МОСКОВСКОЙ ОБЛАСТИ' },
+  { label: 'ФИО',               value: passport.fullName },
+  { label: 'Пол',               value: passport.genderDisplay },
+  { label: 'Дата рождения',     value: passport.dob },
+  { label: 'Место рождения',    value: passport.birthPlace },
+  { label: 'Серия и номер',     value: passport.seriesNumber },
+  { label: 'Дата выдачи',       value: passport.issueDate },
+  { label: 'Код подразделения', value: passport.divisionCode },
+  { label: 'Кем выдан',         value: passport.issuedBy },
 ]
 
 export default function PassportDetailsPage() {

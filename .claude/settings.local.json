@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:zxcanton228.github.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://zxcanton228.github.io/gos/assets/index-fjBclGAL.js\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://zxcanton228.github.io/gos/assets/index-CP7s57UF.css\")",
+      "Bash(curl -s \"https://zxcanton228.github.io/gos/assets/index-fjBclGAL.js\")",
+      "Bash(curl -s \"https://zxcanton228.github.io/gos/assets/index-CP7s57UF.css\")",
+      "Bash(grep -o '.\\\\{0,80\\\\}createHashRouter\\\\|.\\\\{0,80\\\\}HashRouter\\\\|.\\\\{0,80\\\\}createMemoryRouter')",
+      "Bash(VITE_BASE_URL=/gos/ bun run build)",
+      "Bash(curl -s \"https://zxcanton228.github.io/gos/sw.js\")",
+      "Bash(curl -s \"https://api.github.com/repos/zxcanton228/gos/actions/runs?per_page=5\")",
+      "Bash(curl -s \"https://zxcanton228.github.io/gos/registerSW.js\")",
+      "Bash(curl -s \"https://zxcanton228.github.io/gos/workbox-9c191d2f.js\")",
+      "Bash(bun run *)",
+      "Bash(curl *)",
+      "PowerShell(bun run *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ]
+  }
+}

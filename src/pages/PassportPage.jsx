@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { passport } from '../data/passport'
 
 const BackIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -84,18 +85,18 @@ export default function PassportPage() {
           {/* Issuer */}
           <div>
             <div className="pp-label">Кем выдан</div>
-            <div className="pp-value">ГУ МВД РОССИЯ ПО МОСКОВСКОЙ ОБЛАСТИ</div>
+            <div className="pp-value">{passport.issuedBy}</div>
           </div>
 
           {/* Date + division code */}
           <div className="pp-two-col">
             <div className="pp-col">
               <div className="pp-label">Дата выдачи</div>
-              <div className="pp-value" style={{ marginBottom: 0 }}>30.01.2024</div>
+              <div className="pp-value" style={{ marginBottom: 0 }}>{passport.issueDate}</div>
             </div>
             <div className="pp-col">
               <div className="pp-label">Код подразделения</div>
-              <div className="pp-value" style={{ marginBottom: 0 }}>500-077</div>
+              <div className="pp-value" style={{ marginBottom: 0 }}>{passport.divisionCode}</div>
             </div>
           </div>
 
@@ -103,7 +104,7 @@ export default function PassportPage() {
 
           {/* Passport number */}
           <div className="pp-num-row">
-            <span className="pp-number">4623 456961</span>
+            <span className="pp-number">{passport.seriesNumber}</span>
             <button className="copy-btn" aria-label="Копировать номер">
               <CopyIcon />
             </button>
@@ -120,23 +121,23 @@ export default function PassportPage() {
 
           <div className="pp-info">
             <div className="pp-label" style={{ color: '#888' }}>ФИО</div>
-            <div className="pp-fullname">ВЕГЕЛЕ КИРИЛЛ РОМАНОВИЧ</div>
+            <div className="pp-fullname">{passport.fullName}</div>
 
             <div className="pp-row2">
               <div className="pp-field">
                 <div className="pp-label" style={{ color: '#888' }}>Пол</div>
-                <div className="pp-value" style={{ marginBottom: 0 }}>МУЖСКОЙ</div>
+                <div className="pp-value" style={{ marginBottom: 0 }}>{passport.gender}</div>
               </div>
               <div className="pp-field">
                 <div className="pp-label" style={{ color: '#888' }}>Дата рождения</div>
-                <div className="pp-value" style={{ marginBottom: 0 }}>17.01.2010</div>
+                <div className="pp-value" style={{ marginBottom: 0 }}>{passport.dob}</div>
               </div>
             </div>
 
             <div>
               <div className="pp-label" style={{ color: '#888' }}>Место рождения</div>
               <div className="pp-value" style={{ marginBottom: 0, lineHeight: '1.4' }}>
-                ГОРОД НОВОКУЗНЕЦК КЕМЕРОВСКАЯ ОБЛАСТЬ
+                {passport.birthPlace}
               </div>
             </div>
 
