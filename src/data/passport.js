@@ -1,5 +1,5 @@
 export const passport = {
-	fullName: 'ВЕГЕЛЕ КИРИЛЛ РОМАНОВИЧ',
+	fullName: 'ПОПОВ АРТЕМ ВЛАДИМИРОВИЧ',
 	gender: 'МУЖСКОЙ',
 	genderDisplay: 'Мужской',
 	dob: '17.01.2008',
